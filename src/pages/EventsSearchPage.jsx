@@ -29,7 +29,7 @@ const EventsSearchPage = () => {
         {events.length !== 0 &&
           events.map(({ name, id }) => (
             <li key={id}>
-              <Link>{name}</Link>
+              <Link to={id}>{name}</Link>
             </li>
           ))}
       </ul>

@@ -29,3 +29,13 @@ export async function fetchEventsByName(keyword) {
   console.log(response.data);
   return response.data._embedded.events;
 }
+
+export async function fetchEventById(id) {
+  const response = await axios(`events/${id}`, {
+    params: {
+      apikey: KEY,
+    },
+  });
+
+  return response.data;
+}
